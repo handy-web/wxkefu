@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>投放管理 - 公号文案管理</title>
+	    <meta charset="utf-8">
+	  	<link rel="icon" id="favicon" href="lib/img/icon.png" type="image/x-icon">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<!--[if IE]>
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	    <![endif]-->
+	    <meta name="renderer" content="webkit">
+	    <meta name="description" content="微桥智能多客服系统">
+	    <meta name="keywords" content="微桥智能多客服系统"> 
+	   	<link rel="stylesheet" href="lib/css/global.css" />
+	   	<link rel="stylesheet" href="lib/css/layout.css" />
+	   	<link rel="stylesheet" type="text/css" href="lib/css/style.css"/>
+		<script type="text/javascript" src="lib/js/jquery-1.9.0.min.js" ></script>
+	</head>
+	<body>
+		<!--菜单栏+左侧菜单-->
+		<div id="header"></div>
+		<script>
+			$(function() {
+				$('#header').load('header.html');
+			});
+		</script>
+		<!--菜单栏+左侧菜单end-->
+		
+		<div class="section-box">
+			<div class="cot-row" id="cotRow">
+				<div class="fans-st">
+					<span class="fans-span">文案名称：</span>
+					<input class="fans-int pub-wt" type="text" name="" id="" value="" />
+					<a class="pub-btn">查找</a>
+					<div class="fans-btn">
+						<a class="btn-ct">更新状态</a>
+						<a class="btn-mt">删除文案</a>
+						<a class="btn-ct btn-index">生成文案</a>
+					</div>
+				</div>
+				<div class="cot-item">
+					<ul class="cot-line">
+						<li>
+							<h3 class="clo1">选择</h3>
+							<h3 class="clo2">文案标题</h3>
+							<h3 class="clo3">是否启用</h3>
+							<h3 class="clo4">操作</h3>
+						</li>
+						<li>
+							<p class="clo1">
+								<label class="cent-cell" for="cot_1">
+									<a class="cent-hd">
+										<input type="checkbox" name="cotname" id="cot_1">
+										<i class="cent-checked"></i>
+									</a>
+								</label>
+							</p>
+							<p class="clo2">干哈腻后面加</p>
+							<p class="clo3">是</p>
+							<p class="clo4">
+								<a class="live-ctn"></a>
+								<a class="live-close"></a>
+							</p>
+						</li>
+						<li>
+							<p class="clo1">
+								<label class="cent-cell" for="cot_2">
+									<a class="cent-hd">
+										<input type="checkbox" name="cotname" id="cot_2">
+										<i class="cent-checked"></i>
+									</a>
+								</label>
+							</p>
+							<p class="clo2">干哈腻后面加</p>
+							<p class="clo3">是</p>
+							<p class="clo4">
+								<a class="live-ctn"></a>
+								<a class="live-close"></a>
+							</p>
+						</li>
+					</ul>
+				</div>
+				<div class="fans-item">
+					<div class="fans-row">
+						<div class="fans-hd">
+							<span>每页</span>
+							<select>
+								<option>20条</option>
+								<option>21条</option>
+								<option>22条</option>
+								<option>23条</option>
+							</select>
+							<span>共120条</span>
+						</div>
+						<div class="fans-rt">							
+							<ul class="page-row">
+								<li><a><i class="page-lt"></i></a></li>
+								<li><a><span>1</span></a></li>
+								<li><a><span>2</span></a></li>
+								<li><a><span>3</span></a></li>
+								<li><a><span>4</span></a></li>
+								<li class="active"><a><span>5</span></a></li>
+								<li><a><span>6</span></a></li>
+								<li><a><span>7</span></a></li>
+								<li><a><span>8</span></a></li>
+								<li><a><span>9</span></a></li>
+								<li><a><span>10</span></a></li>
+								<li><a><i class="page-rt"></i></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>			
+			</div>
+		</div>		
+		<!--遮罩公用-->
+		<div class="mask"></div>
+		
+		<!--生成文案-->
+		<div class="cot-sub bomb-box">
+			<div class="bomb-title">
+				<span>生成文案</span>
+				<a class="cot-close bomb-close"><i></i></a>
+			</div>
+			<div class="cot-mt">
+				<div class="cot-list">
+					<ul class="cot-fell">
+						<li>
+							<span>文案标题：</span>
+							<input type="text" name="" id="" value="" placeholder="请输入文案标题" />
+						</li>
+						<li>
+							<span>网址：</span>
+							<input type="text" name="" id="" value="" placeholder="请输入网址" />
+						</li>
+					</ul>
+				</div>
+				<div class="mery-btn">
+					<a class="btn-vt">取消</a>
+					<a class="btn-ut">发送</a>
+				</div>
+			</div>
+		</div>
+		<script>
+			$(function(){
+				$('.cot-row').css('max-height',$('.section-box').outerHeight() - $('.fans-item').outerHeight() + 'px');
+				$('.btn-index').click(function(){
+					$('.mask').show();
+					$('.cent-box',window.parent.document).css('z-index','3');
+					$('.cot-sub').css('top',($(window).height() - $('.cot-sub').outerHeight()) / 2 + 'px');
+					$('.cot-sub').addClass('active');
+					$('.cot-close,.btn-vt').click(function(){
+						$('.cot-sub').removeClass('active');
+						$('.mask').hide();
+						$('.cent-box',window.parent.document).css('z-index','0');
+					});
+				});
+			});
+		</script>
+	</body>
+</html>

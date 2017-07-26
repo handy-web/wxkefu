@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>系统管理 - 会话管理 - 话术管理</title>
+	    <meta charset="utf-8">
+	  	<link rel="icon" id="favicon" href="lib/img/icon.png" type="image/x-icon">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<!--[if IE]>
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	    <![endif]-->
+	    <meta name="renderer" content="webkit">
+	    <meta name="description" content="微桥智能多客服系统">
+	    <meta name="keywords" content="微桥智能多客服系统"> 
+	   	<link rel="stylesheet" href="lib/css/global.css" />
+	   	<link rel="stylesheet" href="lib/css/layout.css" />
+	   	<link rel="stylesheet" href="lib/css/dateFormat.css" />
+	   	<link rel="stylesheet" type="text/css" href="lib/css/style.css"/>
+		<script type="text/javascript" src="lib/js/jquery-1.9.0.min.js" ></script>
+	</head>
+	<body>		
+		<div id="article">
+			<!--左边侧边栏-->
+			<!--<section class="st-item">
+				<h3 class="st-ht"><a href="systemBusiness.html">企业账户管理</a></h3>
+				<h3 class="st-ht"><a href="">会员管理</a></h3>
+				<h3 class="st-ht"><a href="">权限管理</a></h3>
+				<ul class="st-line">
+					<li><a href="">管理员权限管理</a></li>
+					<li><a href="">角色管理</a></li>
+				</ul>
+				<h3 class="st-ht"><a href="systemGroup.html">分组管理</a></h3>
+				<h3 class="st-ht active"><a href="systemConverSource.html">会话管理</a></h3>
+				<ul class="st-line" style="display: block;">
+					<li><a href="systemConverSource.html">粉丝标签</a></li>
+					<li><a href="systemConverFans.html">素材分类</a></li>
+					<li class="active"><a href="systemConverSpeech.html">话术管理</a></li>
+					<li><a href="systemConverReply.html">自动回复</a></li>
+				</ul>
+				<h3 class="st-ht"><a href="systemWxAddperson.html">微信管理</a></h3>
+				<ul class="st-line">
+					<li><a href="systemWxAddperson.html">添加个人号</a></li>
+					<li><a href="systemWxsignal.html">添加公众号</a></li>
+				</ul>
+				<h3 class="st-ht"><a href="">内容管理</a></h3>
+				<h3 class="st-ht"><a href="">网站管理</a></h3>
+			</section>-->
+			<article class="st-row">
+				<div class="chek-box" id="chekBox">
+					<div class="fans-st">
+						<span class="fans-span">问答内容：</span>
+						<input class="fans-int pub-wt pub-hei" type="text" name="" id="" value="" placeholder="" />
+						<a class="pub-btn chek-wt">导入文件</a>
+						<a class="chek-vt">下载话术导入模板</a>
+					</div>
+					<div class="fans-st">
+						<a class="pub-btn chek-wt">批量删除</a>
+						<span class="fans-span">一级目录：</span>
+						<span class="sub-box fans-wts">
+							<span class="sub-line">
+								<span class="sub-row">文本</span>
+								<ul>
+									<li>测试一</li>
+									<li>测试二</li>
+								</ul>
+							</span>
+						</span>
+						<span class="fans-span">二级目录：</span>
+						<span class="sub-box fans-wts">
+							<span class="sub-line">
+								<span class="sub-row">文本</span>
+								<ul>
+									<li>测试一</li>
+									<li>测试二</li>
+								</ul>
+							</span>
+						</span>
+						<span class="fans-span">三级目录：</span>
+						<span class="sub-box fans-wts">
+							<span class="sub-line">
+								<span class="sub-row">文本</span>
+								<ul>
+									<li>测试一</li>
+									<li>测试二</li>
+								</ul>
+							</span>
+						</span>
+						<a class="pub-btn chek-wt">查找</a>
+					</div>
+					
+					<ul class="chek-line">
+						<li>
+							<h3 class="clo1">
+								<label class="cent-cell" for="chekAll">
+									<a class="cent-hd">
+										<input type="checkbox" name="check_all" id="chekAll">
+										<i class="cent-checked"></i>
+									</a>
+								</label>								
+							</h3>
+							<h3 class="clo2">一级目录</h3>
+							<h3 class="clo2">二级目录</h3>
+							<h3 class="clo2">三级目录</h3>
+							<h3 class="clo2">四级目录</h3>
+							<h3 class="clo3">问答</h3>
+							<h3 class="clo4">问答详情</h3>
+							<h3 class="clo5">操作</h3>
+						</li>
+						<li>
+							<p class="clo1">
+								<label class="cent-cell" for="chek_1">
+									<a class="cent-hd">
+										<input type="checkbox" name="check_name" id="chek_1">
+										<i class="cent-checked"></i>
+									</a>
+								</label>
+							</p>
+							<p class="clo2">马云爸爸</p>
+							<p class="clo2">马云爸爸</p>
+							<p class="clo2">马云爸爸</p>
+							<p class="clo2">马云爸爸</p>
+							<p class="clo3">医</p>
+							<p class="clo4">武术套路运动员标准剑器的选择与使用</p>
+							<p class="clo5">
+								<a class="live-ctn"></a>
+								<a class="live-close"></a>
+							</p>
+						</li>
+						<li>
+							<p class="clo1">
+								<label class="cent-cell" for="chek_1">
+									<a class="cent-hd">
+										<input type="checkbox" name="check_name" id="chek_1">
+										<i class="cent-checked"></i>
+									</a>
+								</label>
+							</p>
+							<p class="clo2">马云爸爸</p>
+							<p class="clo2">马云爸爸</p>
+							<p class="clo2">马云爸爸</p>
+							<p class="clo2">马云爸爸</p>
+							<p class="clo3">医</p>
+							<p class="clo4">武术套路运动员标准剑器的选择与使用</p>
+							<p class="clo5">
+								<a class="live-ctn"></a>
+								<a class="live-close"></a>
+							</p>
+						</li>																
+					</ul>
+				</div>
+				<div class="fans-item">
+					<div class="fans-row">
+						<div class="fans-hd">
+							<span>每页</span>
+							<select>
+								<option>20条</option>
+								<option>21条</option>
+								<option>22条</option>
+								<option>23条</option>
+							</select>
+							<span>共120条</span>
+						</div>
+						<div class="fans-rt">
+							<ul class="page-row">
+								<li><a><i class="page-lt"></i></a></li>
+								<li><a><span>1</span></a></li>
+								<li><a><span>2</span></a></li>
+								<li><a><span>3</span></a></li>
+								<li><a><span>4</span></a></li>
+								<li class="active"><a><span>5</span></a></li>
+								<li><a><span>6</span></a></li>
+								<li><a><span>7</span></a></li>
+								<li><a><span>8</span></a></li>
+								<li><a><span>9</span></a></li>
+								<li><a><span>10</span></a></li>
+								<li><a><i class="page-rt"></i></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>	
+			</article>
+		</div>
+		
+		<!--遮罩公用-->
+		<div class="mask"></div>
+		
+		<!--编辑文案-->
+		<div class="chek-sub bomb-box">
+			<div class="bomb-title">
+				<span>编辑文案</span>
+				<a class="chek-sub-close bomb-close"><i></i></a>
+			</div>
+			<div class="chek-item">
+				<span>内容：</span>
+				<textarea id="chekItem" name="" rows="7" cols="20"></textarea>
+				<div class="chek-row">				
+					<span class="chek-span">问答：</span>
+					<label class="cent-cell" for="redio_1">
+						<a class="cent-chek">
+							<input type="radio" name="check_radio" id="redio_1">
+							<i class="cent-radio"></i>
+						</a>
+						<em class="chek-em">患（答）</em>
+					</label>
+					<span class="chek-span chek-let">问答：</span>
+					<label class="cent-cell" for="redio_2">
+						<a class="cent-chek">
+							<input type="radio" name="check_radio" id="redio_2">
+							<i class="cent-radio"></i>
+						</a>
+						<em class="chek-em">医（问）</em>
+					</label>
+				</div>
+			</div>
+			<div class="mery-btn">
+				<a class="btn-vt chek-em-close">取消</a>
+				<a class="btn-ut">确认</a>
+			</div>
+		</div>
+		
+		<script type="text/javascript" src="lib/js/selectFx.js" ></script>
+		<script type="text/javascript">
+			$(function(){
+				$('.chek-box').css('max-height',$('#article').outerHeight() - $('.fans-item').outerHeight() + 'px');
+				$(".st-ht").click(function() {
+					$(this).toggleClass('active').siblings('.st-ht').removeClass('active');
+					$(this).next(".st-line").slideToggle().siblings(".st-line").slideUp();
+				});
+				$(".lev-ht").click(function() {					
+					$(this).toggleClass('active').siblings('.lev-ht').removeClass('active');
+					$(this).next(".lev-item").slideToggle().siblings(".lev-item").slideUp();	
+					$(this).parents(".st-groups").find('.st-icon').toggle().siblings(".st-icon").slideUp();	
+				});
+				$("#chekAll").click(function() {
+					if($(this).is(':checked')) {
+						$("input[name='check_name']").prop("checked", "checked");
+					} else {
+						$("input[name='check_name']").removeAttr("checked");
+					}
+				});
+				var num = 0;  //总计不选个数
+				$("input[name='check_name']").each(function(){
+					var _index = $("input[name='check_name']").length;		
+					$(this).click(function(){	
+						if (!$(this).is(':checked')){
+							num = num + 1;
+							if (num == _index) {
+								$("#chekAll").removeAttr("checked");
+								num = 0;
+							}
+						} 			
+					});					
+				});
+				$('.live-ctn').click(function(){
+					$('.mask').show();
+					$('.cent-box',window.parent.document).css('z-index','3');
+					$('.chek-sub').css('top',($(window).height() - $('.chek-sub').outerHeight()) / 2 + 'px');
+					$('.chek-sub').addClass('active');
+					$('.chek-sub-close,.chek-em-close').click(function(){
+						$('.chek-sub').removeClass('active');
+						$('.mask').hide();
+						$('.cent-box',window.parent.document).css('z-index','0');
+					});
+				});
+			});
+		</script>
+	</body>
+</html>

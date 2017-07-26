@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>一线粉丝 - 分配到客服</title>
+	    <meta charset="utf-8">
+	  	<link rel="icon" id="favicon" href="lib/img/icon.png" type="image/x-icon">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<!--[if IE]>
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	    <![endif]-->
+	    <meta name="renderer" content="webkit">
+	    <meta name="description" content="微桥智能多客服系统">
+	    <meta name="keywords" content="微桥智能多客服系统"> 
+	   	<link rel="stylesheet" href="lib/css/global.css" />
+	   	<link rel="stylesheet" href="lib/css/layout.css" />
+	   	<link rel="stylesheet" href="lib/css/dateFormat.css" />
+	   	<link rel="stylesheet" type="text/css" href="lib/css/style.css"/>
+		<script type="text/javascript" src="lib/js/jquery-1.9.0.min.js" ></script>
+	</head>
+	<body>
+		<!--菜单栏+左侧菜单-->
+		<div id="header"></div>
+		<script>
+			$(function() {
+				$('#header').load('header.html');
+			});
+		</script>
+		<!--菜单栏+左侧菜单end-->
+		
+		<div class="section-box">
+			<div class="lone-item">
+				<div class="lone-hd">
+					<div class="lone-row">
+						<div class="lev-ht">
+							<a class="lev-all">所有分组</a>
+						</div>
+						<div class="lev-item">
+							<h3>小米组</h3>
+							<h3 class="lev-h3">深圳组</h3>
+							<div class="lev-mt">
+								<a>深圳1组</a>
+								<a>深圳2组</a>
+							</div>
+							<h3 class="lev-h3">广州组</h3>
+							<div class="lev-mt">
+								<a>广州1组</a>
+								<a>广州2组</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="lone-rt">
+					<div class="lone-sub" id="loneSub">
+						<ul class="lone-line">
+							<li>
+								<h3 class="clo1">
+									<label class="cent-cell" for="lone_all">
+										<a class="cent-hd">
+											<input type="checkbox" name="loneAll" id="lone_all">
+											<i class="cent-checked"></i>
+										</a>
+									</label>
+								</h3>
+								<h3 class="clo2">ID</h3>
+								<h3 class="clo2">账号</h3>
+								<h3 class="clo2">姓名</h3>
+								<h3 class="clo2">分配数量</h3>
+								<h3 class="clo2">状态</h3>
+								<h3 class="clo3"></h3>
+							</li>
+							<li>
+								<p class="clo1">
+									<label class="cent-cell" for="lone_1">
+										<a class="cent-hd">
+											<input type="checkbox" name="lone" id="lone_1">
+											<i class="cent-checked"></i>
+										</a>
+									</label>
+								</p>
+								<p class="clo2">55452211</p>
+								<p class="clo2"></p>
+								<p class="clo2">李先密</p>
+								<p class="clo2"><input class="lone-int" type="text" name="" id="" value="" /></p>
+								<p class="clo2"></p>
+								<p class="clo3"></p>
+							</li>
+							<li>
+								<p class="clo1">
+									<label class="cent-cell" for="lone_2">
+										<a class="cent-hd">
+											<input type="checkbox" name="lone" id="lone_2">
+											<i class="cent-checked"></i>
+										</a>
+									</label>
+								</p>
+								<p class="clo2">55452211</p>
+								<p class="clo2"></p>
+								<p class="clo2">李先密</p>
+								<p class="clo2"><input class="lone-int" type="text" name="" id="" value="" /></p>
+								<p class="clo2"></p>
+								<p class="clo3"></p>
+							</li>
+						</ul>
+						<p class="lone-pt">合计：100</p>
+						<div class="lone-btn">
+							<a class="lone-close">取消</a>
+							<a class="lone-confirm">确定</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+			$(function(){
+				$(".lev-ht").click(function() {
+					$(this).toggleClass('active').siblings('.lev-ht').removeClass('active');
+					$(this).next(".lev-item").slideToggle().siblings(".lev-item").slideUp();
+				});
+				$(".lev-h3").click(function() {
+					$(this).toggleClass('active').siblings('.lev-h3').removeClass('active');
+					$(this).next(".lev-mt").slideToggle().siblings(".lev-mt").slideUp();
+				});
+				$("#lone_all").click(function() {
+					if($(this).is(':checked')) {
+						$("input[name='lone']").prop("checked", "checked");
+					} else {
+						$("input[name='lone']").removeAttr("checked");
+					}
+				});
+				var num = 0;  //总计不选个数
+				$("input[name='lone']").each(function(){
+					var _index = $("input[name='lone']").length;		
+					$(this).click(function(){	
+						if (!$(this).is(':checked')){
+							num = num + 1;
+							if (num == _index) {
+								$("#lone_all").removeAttr("checked");
+								num = 0;
+							}
+						} 			
+					});					
+				});
+			});
+		</script>
+	</body>
+</html>

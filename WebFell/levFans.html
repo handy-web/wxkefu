@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>一线粉丝</title>
+	    <meta charset="utf-8">
+	  	<link rel="icon" id="favicon" href="lib/img/icon.png" type="image/x-icon">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<!--[if IE]>
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	    <![endif]-->
+	    <meta name="renderer" content="webkit">
+	    <meta name="description" content="微桥智能多客服系统">
+	    <meta name="keywords" content="微桥智能多客服系统"> 
+	   	<link rel="stylesheet" href="lib/css/global.css" />
+	   	<link rel="stylesheet" href="lib/css/layout.css" />
+	   	<link rel="stylesheet" href="lib/css/dateFormat.css" />
+	   	<link rel="stylesheet" type="text/css" href="lib/css/style.css"/>
+		<script type="text/javascript" src="lib/js/jquery-1.9.0.min.js" ></script>
+	</head> 
+	<body>
+		<!--菜单栏+左侧菜单-->
+		<div id="header"></div>
+		<script>
+			$(function() {
+				$('#header').load('header.html');
+			});
+		</script>
+		<!--菜单栏+左侧菜单end-->
+		
+		<div class="section-box">
+			<div class="fans-sub fans-top" id="fanSub">
+				<div class="fans-st">
+					<span class="fans-span">用户ID：</span>
+					<input class="fans-int fans-wt1" type="text" name="" id="" value="" placeholder="用户的ID" />
+					<span class="fans-span">综合条件：</span>
+					<input class="fans-int fans-wt1" type="text" name="" id="" value="" placeholder="昵称 姓名 电话" />
+					<span class="fans-span">所属客服：</span>
+					<input class="fans-int fans-wt1" type="text" name="" id="" value="" placeholder="所属客服" />
+					<span class="fans-span">未分配客服：</span>
+					<label class="cent-cell fans-ct" for="check">
+						<a class="cent-hd cent-pos">
+							<input type="checkbox" name="check" id="check">
+							<i class="cent-checked"></i>
+						</a>
+					</label>
+					<span class="fans-span">是否分配：</span>
+					<span class="sub-box sub-wt">
+						<span class="sub-line">
+							<span class="sub-row">文本</span>
+							<ul>
+								<li>测试一</li>
+								<li>测试二</li>
+							</ul>
+						</span>
+					</span>
+				</div>
+				<div class="fans-st">
+					<span class="fans-span">所属微信：</span>
+					<span class="sub-box fans-wts">
+						<span class="sub-line">
+							<span class="sub-row">文本</span>
+							<ul>
+								<li>测试一</li>
+								<li>测试二</li>
+							</ul>
+						</span>
+					</span>
+					
+					<span class="fans-span">关注日期：</span>
+					<input id="datepicker_st" class="fans-int fans-wt1 pub-time" type="text" name="" readonly placeholder="请选择开始日期" />
+					<span class="fans-span">-</span>
+					<input id="datepicker_end" class="fans-int fans-wt1 pub-time" type="text" name="" readonly placeholder="请选择结束日期" />		
+					<span class="fans-span">所属分组：</span>	
+					<span class="sub-box sub-wt">
+						<span class="sub-line">
+							<span class="sub-row">文本</span>
+							<ul>
+								<li>测试一</li>
+								<li>测试二</li>
+							</ul>
+						</span>
+					</span>
+				</div>
+				<div class="fans-st">
+					<span class="fans-span">客户类型：</span>
+					<span class="sub-box fans-wts">
+						<span class="sub-line">
+							<span class="sub-row">文本</span>
+							<ul>
+								<li>测试一</li>
+								<li>测试二</li>
+							</ul>
+						</span>
+					</span>
+					<span class="fans-span">沟通进展：</span>
+					<span class="sub-box fans-wts">
+						<span class="sub-line">
+							<span class="sub-row">文本</span>
+							<ul>
+								<li>测试一</li>
+								<li>测试二</li>
+							</ul>
+						</span>
+					</span>
+					<span class="fans-span">疾病类型：</span>
+					<span class="sub-box fans-wts">
+						<span class="sub-line">
+							<span class="sub-row">文本</span>
+							<ul>
+								<li>测试一</li>
+								<li>测试二</li>
+							</ul>
+						</span>
+					</span>		
+					<span class="fans-span">售后情况：</span>	
+					<span class="sub-box fans-wts">
+						<span class="sub-line">
+							<span class="sub-row">文本</span>
+							<ul>
+								<li>测试一</li>
+								<li>测试二</li>
+							</ul>
+						</span>
+					</span>
+					<div class="fans-btn">
+						<a class="btn-ct">查找</a>
+						<a class="btn-mt">群发消息</a>
+						<a class="btn-ct btn-index">更新客服</a>
+					</div>
+				</div>
+				<div class="fans-mt">
+					<ul class="fans-line">
+						<li>
+							<h4 class="clo4">
+								<label class="cent-cell" for="checkview">
+									<a class="cent-hd">
+										<input type="checkbox" name="check" id="checkview">
+										<i class="cent-checked"></i>
+									</a>
+								</label>
+							</h4>
+							<h4 class="clo7">ID</h4>
+							<h4 class="clo8">微信昵称</h4>
+							<h4 class="clo12">所属微信</h4>
+							<h4 class="clo7">所属客服</h4>
+							<h4 class="clo10">所属分组</h4>
+							<h4 class="clo6">地区</h4>
+							<h4 class="clo10">备注</h4>
+							<h4 class="clo6">是否关注</h4>
+							<h4 class="clo12">关注时间</h4>
+							<h4 class="clo12">最后一次会话时间</h4>
+							<h4 class="clo6">微信头像</h4>
+						</li>
+						<li>
+							<p class="clo4">
+								<label class="cent-cell" for="checkview1">
+									<a class="cent-hd">
+										<input type="checkbox" name="checkview" id="checkview1">
+										<i class="cent-checked"></i>
+									</a>
+								</label>
+							</p>
+							<p class="clo7">5221442</p>
+							<p class="clo8">陈虾米</p>
+							<p class="clo12">加博士女科工作室VIP</p>
+							<p class="clo7">小米</p>
+							<p class="clo10">V04-B组</p>
+							<p class="clo6">广东 深圳</p>
+							<p class="clo10">红色警戒进度款</p>
+							<p class="clo6">是</p>
+							<p class="clo12">2016-10-20 10:00:00</p>
+							<p class="clo12">2016-10-25 10:00:00</p>
+							<p class="clo6"><img src="lib/img/app-bg.png"/></p>
+						</li>
+						<li>
+							<p class="clo4">
+								<label class="cent-cell" for="checkview2">
+									<a class="cent-hd">
+										<input type="checkbox" name="checkview" id="checkview2">
+										<i class="cent-checked"></i>
+									</a>
+								</label>
+							</p>
+							<p class="clo7">5221442</p>
+							<p class="clo8">陈虾米</p>
+							<p class="clo12">加博士女科工作室VIP</p>
+							<p class="clo7">小米</p>
+							<p class="clo10">V04-B组</p>
+							<p class="clo6">广东 深圳</p>
+							<p class="clo10">红色警戒进度款</p>
+							<p class="clo6">是</p>
+							<p class="clo12">2016-10-20 10:00:00</p>
+							<p class="clo12">2016-10-25 10:00:00</p>
+							<p class="clo6"><img src="lib/img/app-bg.png"/></p>
+						</li>
+						<li>
+							<p class="clo4">
+								<label class="cent-cell" for="checkview3">
+									<a class="cent-hd">
+										<input type="checkbox" name="checkview" id="checkview3">
+										<i class="cent-checked"></i>
+									</a>
+								</label>
+							</p>
+							<p class="clo7">5221442</p>
+							<p class="clo8">陈虾米</p>
+							<p class="clo12">加博士女科工作室VIP</p>
+							<p class="clo7">小米</p>
+							<p class="clo10">V04-B组</p>
+							<p class="clo6">广东 深圳</p>
+							<p class="clo10">红色警戒进度款</p>
+							<p class="clo6">是</p>
+							<p class="clo12">2016-10-20 10:00:00</p>
+							<p class="clo12">2016-10-25 10:00:00</p>
+							<p class="clo6"><img src="lib/img/app-bg.png"/></p>
+						</li>
+						<li>
+							<p class="clo4">
+								<label class="cent-cell" for="checkview4">
+									<a class="cent-hd">
+										<input type="checkbox" name="checkview" id="checkview4">
+										<i class="cent-checked"></i>
+									</a>
+								</label>
+							</p>
+							<p class="clo7">5221442</p>
+							<p class="clo8">陈虾米</p>
+							<p class="clo12">加博士女科工作室VIP</p>
+							<p class="clo7">小米</p>
+							<p class="clo10">V04-B组</p>
+							<p class="clo6">广东 深圳</p>
+							<p class="clo10">红色警戒进度款</p>
+							<p class="clo6">是</p>
+							<p class="clo12">2016-10-20 10:00:00</p>
+							<p class="clo12">2016-10-25 10:00:00</p>
+							<p class="clo6"><img src="lib/img/app-bg.png"/></p>
+						</li>
+					</ul>
+				</div>
+				<div class="fans-item">
+				<div class="fans-row">
+					<div class="fans-hd">
+						<span>每页</span>
+						<select>
+							<option>20条</option>
+							<option>21条</option>
+							<option>22条</option>
+							<option>23条</option>
+						</select>
+						<span>共120条</span>
+					</div>
+					<div class="fans-rt">
+						<ul class="page-row">
+								<li><a><i class="page-lt"></i></a></li>
+								<li><a><span>1</span></a></li>
+								<li><a><span>2</span></a></li>
+								<li><a><span>3</span></a></li>
+								<li><a><span>4</span></a></li>
+								<li class="active"><a><span>5</span></a></li>
+								<li><a><span>6</span></a></li>
+								<li><a><span>7</span></a></li>
+								<li><a><span>8</span></a></li>
+								<li><a><span>9</span></a></li>
+								<li><a><span>10</span></a></li>
+								<li><a><i class="page-rt"></i></a></li>
+							</ul>
+					</div>
+				</div>
+			</div>
+			</div>
+		</div>
+		
+		<!--遮罩公用-->
+		<div class="mask"></div>
+		
+		<!--群发消息-->
+		<div class="bomb-box mery-wt">
+			<div class="bomb-title">
+				<span>群发消息</span>
+				<a class="mery-close bomb-close"><i></i></a>
+			</div>
+			<div class="mery-item">
+				<div class="mery-sub">
+					<div class="sent-row live-pos"> 
+				      <i class="sent-img"><div class="file-item"><input type="file" name="" id="" value=""></div></i> 
+				      <i class="sent-brow"><div class="file-item"><input type="file" name="" id="" value=""></div></i> 
+				      <i class="sent-voice"><div class="file-item"><input type="file" name="" id="" value=""></div></i> 
+				      <i class="sent-video"><div class="file-item"><input type="file" name="" id="" value=""></div></i> 
+				      <i class="sent-shot"></i> 
+				     </div>
+					<a>素材库</a>
+				</div>
+				<div class="mery-kery">
+					<span>内容：</span>
+					<textarea id="meryTxt" class="mery-txt" name="" rows="7" cols="20"></textarea>
+				</div>
+			</div>
+			<p class="mery-pt">当前操作提示：<span>只能给48小时内活跃用户发消息</span></p>
+			<div class="mery-btn">
+				<a class="btn-vt">取消</a>
+				<a class="btn-ut">发送</a>
+			</div>
+		</div>
+
+		<!--更新客服-->
+		<div class="bomb-box mery-up">
+			<div class="bomb-title">
+				<span>更新客服</span>
+				<a class="lev-close bomb-close"><i></i></a>
+			</div>
+			<div class="mery-item">
+				<div class="mery-line">
+					<div class="mery-hd">
+						<div class="lev-ht">
+							<a class="lev-all">所有分组</a>
+						</div>
+						<div class="lev-item">
+							<h3>小米组</h3>
+							<h3 class="lev-h3">深圳组</h3>
+							<div class="lev-mt">
+								<a>深圳1组</a>
+								<a>深圳2组</a>
+							</div>
+							<h3 class="lev-h3">广州组</h3>
+							<div class="lev-mt">
+								<a>广州1组</a>
+								<a>广州2组</a>
+							</div>
+						</div>
+					</div>
+					<div class="mery-rt">
+						<div class="mery-rt-box">
+							<div class="mery-search">
+								<input class="mery-int" type="text" name="" id="" value="" placeholder="搜索" />
+								<a class="search-btn"></a>
+							</div>
+							<div class="mery-list" id="meryList">
+								<ul>
+									<li>
+										<h3 class="clo1">选择</h3>
+										<h3 class="clo2">ID</h3>
+										<h3 class="clo2">账号</h3>
+										<h3 class="clo2">姓名</h3>
+									</li>
+									<li>
+										<p class="clo1">
+											<label class="cent-cell" for="list_1">
+												<a class="cent-hd">
+													<input type="checkbox" name="check" id="list_1">
+													<i class="cent-checked"></i>
+												</a>
+											</label>
+										</p>
+										<p class="clo2">55244442</p>
+										<p class="clo2">v122555</p>
+										<p class="clo2">马云</p>
+									</li>	
+									<li>
+										<p class="clo1">
+											<label class="cent-cell" for="list_1">
+												<a class="cent-hd">
+													<input type="checkbox" name="check" id="list_1">
+													<i class="cent-checked"></i>
+												</a>
+											</label>
+										</p>
+										<p class="clo2">55244442</p>
+										<p class="clo2">v122555</p>
+										<p class="clo2">马云</p>
+									</li>								
+								</ul>						
+							</div>
+						</div>
+						<div class="mery-but">
+							<a class="but-close">取消</a>
+							<a class="but-confire">确定</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="lib/js/selectFx.js" ></script>
+		<script type="text/javascript" src="lib/js/dateFormat.js" ></script>
+		<script type="text/javascript">
+			//datepicker日期插件
+			$().ready(function() {
+				$("#datepicker_st,#datepicker_end").datepicker({
+					dateFormat: "yy-mm-dd"		
+				});		
+			});
+		</script>
+		<script>
+		$(function(){			
+			$('.fans-top').css('max-height',$('.section-box').outerHeight() - $('.fans-item').outerHeight() + 'px');
+			$('.btn-mt').click(function(){
+				$('.mask').show();
+				$('.cent-box',window.parent.document).css('z-index','3');
+				$('.mery-wt').css('top',($(window).height() - $('.mery-wt').outerHeight()) / 2 + 'px');
+				$('.mery-wt').addClass('active');
+				$('.mery-close,.btn-vt').click(function(){
+					$('.mask').hide();
+					$('.cent-box',window.parent.document).css('z-index','0');
+					$('.mery-wt').removeClass('active');
+				});
+			});
+			$('.btn-index').click(function(){
+				$('.mask').show();
+				$('.cent-box',window.parent.document).css('z-index','3');
+				$('.mery-up').css('top',($(window).height() - $('.mery-up').outerHeight()) / 2 + 'px');
+				$('.mery-up').addClass('active');
+				$('.lev-close,.but-close').click(function(){
+					$('.mery-up').removeClass('active');
+					$('.mask').hide();
+					$('.cent-box',window.parent.document).css('z-index','0');
+				});
+			});
+			$("#checkview").click(function() {
+				if($(this).is(':checked')) {
+					$("input[name='checkview']").prop("checked", "checked");
+				} else {
+					$("input[name='checkview']").removeAttr("checked");
+				}
+			});
+			
+			var num = 0;  //总计不选个数
+			$("input[name='checkview']").each(function(){
+				var _index = $("input[name='checkview']").length;		
+				$(this).click(function(){	
+					if (!$(this).is(':checked')){
+						num = num + 1;
+						if (num == _index) {
+							$("#checkview").removeAttr("checked");
+							num = 0;
+						}
+					} 			
+				});					
+			});
+			
+			$(".lev-ht").click(function() {
+				$(this).toggleClass('active').siblings('.lev-ht').removeClass('active');
+				$(this).next(".lev-item").slideToggle().siblings(".lev-item").slideUp();
+			});
+			$(".lev-h3").click(function() {
+				$(this).toggleClass('active').siblings('.lev-h3').removeClass('active');
+				$(this).next(".lev-mt").slideToggle().siblings(".lev-mt").slideUp();
+			});
+			
+		});
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

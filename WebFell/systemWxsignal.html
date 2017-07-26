@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>系统管理 - 微信管理 - 添加公众号</title>
+	    <meta charset="utf-8">
+	  	<link rel="icon" id="favicon" href="lib/img/icon.png" type="image/x-icon">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<!--[if IE]>
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	    <![endif]-->
+	    <meta name="renderer" content="webkit">
+	    <meta name="description" content="微桥智能多客服系统">
+	    <meta name="keywords" content="微桥智能多客服系统"> 
+	   	<link rel="stylesheet" href="lib/css/global.css" />
+	   	<link rel="stylesheet" href="lib/css/layout.css" />
+	   	<link rel="stylesheet" href="lib/css/dateFormat.css" />
+	   	<link rel="stylesheet" type="text/css" href="lib/css/style.css"/>
+	   	<link rel="stylesheet" type="text/css" href="lib/css/city-picker.css" />
+		<script type="text/javascript" src="lib/js/jquery-1.9.0.min.js" ></script>
+	</head>
+	<body>
+		<div id="article">
+			<!--左边侧边栏-->
+			<!--<section class="st-item">
+				<h3 class="st-ht"><a href="systemBusiness.html">企业账户管理</a></h3>
+				<h3 class="st-ht"><a href="">会员管理</a></h3>
+				<h3 class="st-ht"><a href="">权限管理</a></h3>
+				<ul class="st-line">
+					<li><a href="">管理员权限管理</a></li>
+					<li><a href="">角色管理</a></li>
+				</ul>
+				<h3 class="st-ht"><a href="systemGroup.html">分组管理</a></h3>
+				<h3 class="st-ht"><a href="systemConverSource.html">会话管理</a></h3>
+				<ul class="st-line" >
+					<li><a href="systemConverSource.html">粉丝标签</a></li>
+					<li><a href="systemConverFans.html">素材分类</a></li>
+					<li><a href="systemConverSpeech.html">话术管理</a></li>
+					<li><a href="systemConverReply.html">自动回复</a></li>
+				</ul>
+				<h3 class="st-ht active"><a href="systemWxAddperson.html">微信管理</a></h3>
+				<ul class="st-line" style="display: block;">
+					<li><a href="systemWxAddperson.html">添加个人号</a></li>
+					<li class="active"><a href="systemWxsignal.html">添加公众号</a></li>
+				</ul>
+				<h3 class="st-ht"><a href="">内容管理</a></h3>
+				<h3 class="st-ht"><a href="">网站管理</a></h3>
+			</section>-->
+			<article class="st-row">
+				<div class="wx-row">
+					<div class="wx-item">
+						<h2 class="wx-h2">微信公众号授权</h2>
+						<div class="wx-tab">
+							<img src="lib/img/code.png"/>
+							<p>使用公众号绑定的个人微信号扫描</p>
+						</div>
+					</div>
+				</div>
+				<div class="motor-item wx-line">
+					<h3 class="wx-h3">已绑定的公众号</h3>
+					<ul class="motor-list wx-list" id="wxlist">										
+						<li>
+							<div class="motor-list-row">
+								<div class="motor-list-bor">
+									<i class="motor-bg"></i>
+									<img class="motor-img" src="lib/img/app-bg.png">
+									<div class="motor-text">
+										<p>马云爸爸</p>
+										<p>HT12458</p>
+									</div>
+									<div class="motor-icon wx-pt">
+										<p>绑定时间：2017/07/14</p>
+										<p>用户数：14522</p>
+									</div>
+								</div>
+							</div>
+						</li>						
+						<li>
+							<div class="motor-list-row">
+								<div class="motor-list-bor">
+									<i class="motor-bg"></i>
+									<img class="motor-img" src="lib/img/app-bg.png">
+									<div class="motor-text">
+										<p>马云爸爸</p>
+										<p>HT12458</p>
+									</div>
+									<div class="motor-icon wx-pt">
+										<p>绑定时间：2017/07/14</p>
+										<p>用户数：14522</p>
+									</div>
+								</div>
+							</div>
+						</li>		
+					</ul>
+				</div>				
+			</article>
+		</div>
+		<script type="text/javascript" src="lib/js/selectFx.js" ></script>
+		<script type="text/javascript">
+			$(function(){				
+				$(".st-ht").click(function() {
+					$(this).toggleClass('active').siblings('.st-ht').removeClass('active');
+					$(this).next(".st-line").slideToggle().siblings(".st-line").slideUp();
+				});
+				$(".lev-ht").click(function() {					
+					$(this).toggleClass('active').siblings('.lev-ht').removeClass('active');
+					$(this).next(".lev-item").slideToggle().siblings(".lev-item").slideUp();	
+					$(this).parents(".st-groups").find('.st-icon').toggle().siblings(".st-icon").slideUp();	
+				});
+				
+			});
+		</script>
+	</body>
+</html>

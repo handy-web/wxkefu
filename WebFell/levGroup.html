@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>一线粉丝 - 分配到组</title>
+	    <meta charset="utf-8">
+	  	<link rel="icon" id="favicon" href="lib/img/icon.png" type="image/x-icon">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<!--[if IE]>
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	    <![endif]-->
+	    <meta name="renderer" content="webkit">
+	    <meta name="description" content="微桥智能多客服系统">
+	    <meta name="keywords" content="微桥智能多客服系统"> 
+	   	<link rel="stylesheet" href="lib/css/global.css" />
+	   	<link rel="stylesheet" href="lib/css/layout.css" />
+	   	<link rel="stylesheet" href="lib/css/dateFormat.css" />
+	   	<link rel="stylesheet" type="text/css" href="lib/css/style.css"/>
+		<script type="text/javascript" src="lib/js/jquery-1.9.0.min.js" ></script>
+	</head> 
+	<body>
+		<!--菜单栏+左侧菜单-->
+		<div id="header"></div>
+		<script>
+			$(function() {
+				$('#header').load('header.html');
+			});
+		</script>
+		<!--菜单栏+左侧菜单end-->
+		
+		<div class="lev-box">
+			<div class="fans-sub" id="subIcem">
+				<div class="fans-st">
+					<span class="fans-span">分组名称：</span>
+					<input class="fans-int lev-wt" type="text" name="" id="" value="" placeholder="用户的ID" />
+					<span class="fans-span">所属微信：</span>
+					<span class="sub-box fans-wts">
+						<span class="sub-line">
+							<span class="sub-row">文本</span>
+							<ul>
+								<li>测试一</li>
+								<li>测试二</li>
+							</ul>
+						</span>
+					</span>
+					<div class="fans-btn">
+						<span class="lev-span">总用户数：18</span>
+						<span class="lev-span">将要分配用户数：0</span>
+						<a class="btn-ct">查找</a>
+						<a class="btn-ct btn-lev">一键分配</a>
+					</div>
+				</div>
+				<div class="lev-sub">
+					<ul class="lev-line">
+						<li>
+							<h4 class="clo1">
+								<label class="cent-cell" for="levAll">
+									<a class="cent-hd">
+										<input type="checkbox" name="check_all" id="levAll">
+										<i class="cent-checked"></i>
+									</a>
+								</label>
+							</h4>
+							<h4 class="clo2">所属分组</h4>
+							<h4 class="clo3">分配数量</h4>
+							<h4 class="clo4"></h4>
+						</li>
+						<li>
+							<p class="clo1">
+								<label class="cent-cell" for="lev1">
+									<a class="cent-hd">
+										<input type="checkbox" name="check_lev" id="lev1">
+										<i class="cent-checked"></i>
+									</a>
+								</label>
+							</p>
+							<p class="clo2">V04-B02</p>
+							<p class="clo3"><input type="" name="" id="" value="" /></p>
+							<p class="clo4"></p>
+						</li>
+						<li>
+							<p class="clo1">
+								<label class="cent-cell" for="lev2">
+									<a class="cent-hd">
+										<input type="checkbox" name="check_lev" id="lev2">
+										<i class="cent-checked"></i>
+									</a>
+								</label>
+							</p>
+							<p class="clo2">V04-B02</p>
+							<p class="clo3"><input type="" name="" id="" value="" /></p>
+							<p class="clo4"></p>
+						</li>
+					</ul>
+				</div>
+				<div class="fans-item">
+					<div class="fans-row">
+						<div class="fans-hd">
+							<span>每页</span>
+							<select>
+								<option>20条</option>
+								<option>21条</option>
+								<option>22条</option>
+								<option>23条</option>
+							</select>
+							<span>共120条</span>
+						</div>
+						<div class="fans-rt">
+							<ul class="page-row">
+								<li><a><i class="page-lt"></i></a></li>
+								<li><a><span>1</span></a></li>
+								<li><a><span>2</span></a></li>
+								<li><a><span>3</span></a></li>
+								<li><a><span>4</span></a></li>
+								<li class="active"><a><span>5</span></a></li>
+								<li><a><span>6</span></a></li>
+								<li><a><span>7</span></a></li>
+								<li><a><span>8</span></a></li>
+								<li><a><span>9</span></a></li>
+								<li><a><span>10</span></a></li>
+								<li><a><i class="page-rt"></i></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!--遮罩公用-->
+		<div class="mask"></div>
+		
+		<script type="text/javascript" src="lib/js/selectFx.js" ></script>	
+		<script>
+			$('#subIcem').css('max-height',$('.lev-box').outerHeight() - $('.fans-item').outerHeight() + 'px');
+			$(function(){	
+				$("#levAll").click(function() {
+					if($(this).is(':checked')) {
+						$("input[name='check_lev']").prop("checked", "checked");
+					} else {
+						$("input[name='check_lev']").removeAttr("checked");
+					}
+				});
+				var num = 0;  //总计不选个数
+				$("input[name='check_lev']").each(function(){
+					var _index = $("input[name='check_lev']").length;		
+					$(this).click(function(){	
+						if (!$(this).is(':checked')){
+							num = num + 1;
+							if (num == _index) {
+								$("#levAll").removeAttr("checked");
+								num = 0;
+							}
+						} 			
+					});					
+				});
+				
+			});
+		</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
